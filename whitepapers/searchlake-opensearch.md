@@ -81,8 +81,8 @@ Traditional systems like OpenSearch force compromises:
 
 ### Impact
 
-- OpenSearch: higher data loss risk  
-- SearchLake: near-zero loss probability  
+- OpenSearch: pay for $$$ replicas, or risk data loss
+- SearchLake: near-zero loss probability without needing cluster replicas
 
 ---
 
