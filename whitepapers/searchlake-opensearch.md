@@ -58,11 +58,8 @@ Traditional systems like OpenSearch force compromises:
 
 # 💰 Cost Model Comparison
 
-```mermaid
-flowchart LR
-    A[More Retention] --> B[OpenSearch Cost ↑ Linear]
-    A --> C[SearchLake Cost ↑ Minimal]
-```
+
+![Cost](images/cost_model.png)
 
 ### OpenSearch
 
@@ -80,14 +77,7 @@ flowchart LR
 
 # 🛡️ Durability Comparison
 
-```mermaid
-flowchart TD
-    A[OpenSearch] --> B[Block Storage ~5 nines]
-    A --> C[Risk: Node + Disk Failure]
-
-    D[SearchLake] --> E[Object Storage 11 nines]
-    D --> F[No Local Disk Dependency]
-```
+![Reliability](images/reliability.png)
 
 ### Impact
 
