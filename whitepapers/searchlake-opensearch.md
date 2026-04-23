@@ -30,21 +30,14 @@ Traditional systems like OpenSearch force compromises:
 
 ## Traditional Architecture
 
-```mermaid
-flowchart TD
-    A[Security Data Sources] --> B[OpenSearch Cluster]
-    B --> C[Hot Data 30 Days]
-    C --> D[Archive to S3]
-    D --> E[Rehydration Process]
-    E --> F[Historical Query]
-```
+![Traditional](images/traditional.png)
 
 ### Key Issues
 
-- ❌ Only recent data is searchable  
-- ❌ Historical queries are slow  
-- ❌ Cost grows with retention  
-- ❌ Heavy operational overhead  
+- ❌ Only recent data is readily accessible
+- ❌ Historical queries are slow
+- ❌ Cost baloons with retention 
+- ❌ Heavy operational overhead
 
 ---
 
@@ -52,15 +45,7 @@ flowchart TD
 
 ## Modern Architecture
 
-```mermaid
-flowchart TD
-    A[Security Data Sources] --> B[SearchLake Ingest]
-    B --> C[Object Storage - Source of Truth]
-    C --> D[Stateless Compute]
-    D --> E[Real-time Queries]
-    D --> F[Historical Queries]
-    D --> G[AI & Analytics]
-```
+![Modern SearchLake](images/modern_sl.png)
 
 ### Key Advantages
 
@@ -68,52 +53,6 @@ flowchart TD
 - ✅ No rehydration  
 - ✅ Infinite scale  
 - ✅ Elastic compute  
-
----
-
-# 🏢 Case Study: Large XDR Platform
-
-## 📊 Profile
-
-- 100 TB/day ingestion  
-- Billions of events/day  
-- Multi-source telemetry  
-
----
-
-## ❌ Before SearchLake
-
-### Challenges
-
-- 🔒 30-day searchable limit  
-- 💸 Massive OpenSearch cluster cost  
-- ⚙️ Complex operations  
-- 🐢 Slow historical investigations  
-
----
-
-## ✅ After SearchLake
-
-### Results
-
-#### 📦 Unlimited Retention
-- From 30 days → years  
-- No rehydration needed  
-
-#### 💰 Cost Reduction
-- Object storage + compression  
-- Up to **20× cheaper**
-
-#### 🛡️ Higher Durability
-- Block storage → object storage  
-- Orders-of-magnitude safer  
-
-#### ⚙️ Simpler Operations
-- No scaling headaches  
-- No shard management  
-
-#### ⚡ Faster Investigations
-- Query any time range instantly  
 
 ---
 
@@ -202,7 +141,7 @@ flowchart TD
 
 # 🧠 Final Thought
 
-> Security outcomes depend on data availability.
+> Future outcomes depend on data availability.
 
 SearchLake ensures:
 
@@ -217,14 +156,14 @@ SearchLake ensures:
 Evaluate:
 
 - Cost of extending retention  
-- Time to investigate historical threats  
-- Operational overhead  
+- Time to investigate historical incidents  
+- Operational overhead
 
 SearchLake enables:
 
 - Lower cost  
 - Higher resilience  
-- Better security outcomes  
+- Better data-driven outcomes
 
 ---
 
